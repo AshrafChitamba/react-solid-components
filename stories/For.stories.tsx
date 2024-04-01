@@ -3,6 +3,10 @@ import { For } from '../src';
 import * as React from 'react';
 import { ChildName, ChildDetails } from '../example/Child';
 
+/** This is component is used to simplify the control flow of 
+ * mapping through arrays and making the code more readable 
+ * and modular 
+ * */
 const meta: Meta<typeof For> = {
   title: 'React Solid Components/For',
   component: For,
@@ -12,11 +16,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/**  Looping through an array of strings */
+// An array of strings
 const strArray = ['Shahida', 'A-Rahman', 'Shareef', 'Ashraf', 'Marriam'];
 
+/**  Looping through an array of strings */
 export const First: Story = {
-  storyName: 'String Array',
   name: 'StringArray',
   render: () => (
     <div>
@@ -27,7 +31,7 @@ export const First: Story = {
   ),
 };
 
-/**  Looping through an array of objects */
+// An array of objects
 const objArray = [
   {
     name: 'Shahida',
@@ -56,8 +60,8 @@ const objArray = [
   },
 ];
 
+/**  Looping through an array of objects */
 export const Second: Story = {
-  storyName: 'Object Array',
   name: 'ObjectArray',
   render: () => (
     <div
