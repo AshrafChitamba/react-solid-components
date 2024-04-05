@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { ShowProps } from './type';
 
 export const Show = (props: ShowProps): JSX.Element | null => {
