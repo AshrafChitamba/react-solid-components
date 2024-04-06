@@ -1,22 +1,32 @@
-import { JSX } from 'react';
+import { FC, JSX } from 'react';
 import { MatchProps, SwitchProps } from './type';
 
-export const Switch = (props: SwitchProps): JSX.Element | null => {
+export const Switch: FC<SwitchProps> = (props): JSX.Element | null => {
   let children = props.children;
 
+  // turning the child to be array all the times
   if (!Array.isArray(children)) {
     children = [children];
   }
 
-  for (let i = 0; i < children.length; i++) {
+  // filtering only match children
+  const managedChildren = children.filter(child => child.type === Match);
+
+  // Checking if the user has provided an invalid child other than Match
+  if (managedChildren.length !== children.length) {
+    throw new Error('Switch can only have Match direct children');
+  }
+
+  for (let i = 0; i < managedChildren.length; i++) {
     const child = children[i];
+
     if (child.props.when) return child;
   }
 
   return props.fallback as JSX.Element;
 };
 
-export const Match = (props: MatchProps): JSX.Element | null => {
+export const Match: FC<MatchProps> = (props): JSX.Element | null => {
   if (props.when) {
     if (typeof props.children === 'function') {
       return props.children();
