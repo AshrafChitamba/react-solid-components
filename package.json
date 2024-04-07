@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_e66b0cb818c8890"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +37,9 @@
     "trailingComma": "es5"
   },
   "name": "react-solid-components",
-  "author": "=",
+  "author": {
+    "name": "="
+  },
   "module": "dist/react-solid-components.esm.js",
   "size-limit": [
     {
@@ -64,6 +67,7 @@
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
     "babel-loader": "^9.1.3",
+    "chromatic": "^11.3.0",
     "husky": "^9.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
