@@ -68,24 +68,25 @@ export const Fallback = () => {
 
 ## For Component
 
+This is component handles control flow of mapping through arrays and making the code more readable and modular
+
 ```javascript
 import { For } from 'react-solid-components';
 
 const ForExample = () => {
   // An array of names
-  const strArray = ['Shahida', 'A-Rahman', 'Shareef', 'Ashraf', 'Marriam'];
+  const names = ['Shahida', 'A-Rahman', 'Shareef', 'Ashraf', 'Marriam'];
 
   return (
     <div>
-      <For each={strArray}>
+      <For each={names}>
         {(name, index) => <MyComponent key={index} name={name} />}
       </For>
     </div>
   );
 };
 
-export default ForExample
-
+export default ForExample;
 ```
 
 <a id="show"></a>
