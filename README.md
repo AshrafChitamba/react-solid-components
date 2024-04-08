@@ -93,6 +93,27 @@ export default ForExample;
 
 ## Show Component
 
+This is component handles control flow of mapping through arrays and making the code more readable and modular
+
+```javascript
+import { Show } from 'react-solid-components';
+
+const ShowExample = () => {
+  // A name variable
+  const name = 'Ashraf';
+
+  return (
+    <div>
+      <Show when={name === 'Ashraf'} fallback={<Fallback />}>
+        <MyComponent name={name} />
+      </Show>
+    </div>
+  );
+};
+
+export default ShowExample;
+```
+
 <a id="switch"></a>
 
 ## Switch Component
