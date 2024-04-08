@@ -68,7 +68,7 @@ export const Fallback = () => {
 
 ## For Component
 
-This is component handles control flow of mapping through arrays and making the code more readable and modular
+This component handles control flow of mapping through arrays to be rendered.
 
 ```javascript
 import { For } from 'react-solid-components';
@@ -93,7 +93,7 @@ export default ForExample;
 
 ## Show Component
 
-This is component handles control flow of mapping through arrays and making the code more readable and modular
+This component handles control flow of conditional rendering of a one way if-else statement.
 
 ```javascript
 import { Show } from 'react-solid-components';
