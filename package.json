@@ -37,6 +37,10 @@
     "trailingComma": "es5"
   },
   "name": "react-solid-components",
+   "repository": {
+    "url": "https://github.com/AshrafChitamba/react-solid-components"
+  },
+  "homepage": "https://github.com/AshrafChitamba/react-solid-components",
   "author": {
     "name": "="
   },
