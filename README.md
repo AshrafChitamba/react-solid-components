@@ -11,6 +11,7 @@ These components will help you write modular code in dealing with maps, conditio
    1. [For component example](#for)
    2. [Show component example](#show)
    3. [Switch component example](#show)
+3. [Demo](#demo)
 
 <a id="instal"></a>
 
@@ -67,6 +68,26 @@ export const Fallback = () => {
 
 ## For Component
 
+```javascript
+import { For } from 'react-solid-components';
+
+const ForExample = () => {
+  // An array of names
+  const strArray = ['Shahida', 'A-Rahman', 'Shareef', 'Ashraf', 'Marriam'];
+
+  return (
+    <div>
+      <For each={strArray}>
+        {(name, index) => <MyComponent key={index} name={name} />}
+      </For>
+    </div>
+  );
+};
+
+export default ForExample
+
+```
+
 <a id="show"></a>
 
 ## Show Component
@@ -74,6 +95,8 @@ export const Fallback = () => {
 <a id="switch"></a>
 
 ## Switch Component
+
+<a id="demo"></a>
 
 ## Demo
 
