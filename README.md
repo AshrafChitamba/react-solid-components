@@ -118,6 +118,46 @@ export default ShowExample;
 
 ## Switch Component
 
+This component handles control flow of conditional rendering of multi if-else-if-else statements and it goes together with `Match` component.
+
+```javascript
+import { Switch, Match } from 'react-solid-components';
+
+const SwitchExample = () => {
+  // A name variable
+  const name = 'Ashraf';
+
+  // in this example the fourth component will be matched
+  return (
+    <div>
+      <Switch fallback={<Fallback />}>
+        <Match when={props.name === 'Shahida'}>
+          <div>First match component</div>
+        </Match>
+
+        <Match when={props.name === 'A-Rahman'}>
+          <div>Second match component</div>
+        </Match>
+
+        <Match when={props.name === 'Shareef'}>
+          <div>Third match component</div>
+        </Match>
+
+        <Match when={props.name === 'Ashraf'}>
+          <div>Fourth match component</div>
+        </Match>
+
+        <Match when={props.name === 'Marriam'}>
+          <div>Fifth match component</div>
+        </Match>
+      </Switch>
+    </div>
+  );
+};
+
+export default ShowExample;
+```
+
 <a id="demo"></a>
 
 ## Demo
