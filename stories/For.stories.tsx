@@ -3,9 +3,9 @@ import { For } from '../src';
 import * as React from 'react';
 import { ChildName, ChildDetails } from '../example/Child';
 
-/** This is component is used to simplify the control flow of 
- * mapping through arrays and making the code more readable 
- * and modular 
+/** This is component is used to simplify the control flow of
+ * mapping through arrays and making the code more readable
+ * and modular
  * */
 const meta: Meta<typeof For> = {
   title: 'React Solid Components/For',
@@ -73,6 +73,18 @@ export const Second: Story = {
     >
       <For each={objArray}>
         {(data, index) => <ChildDetails key={index} {...data} />}
+      </For>
+    </div>
+  ),
+};
+
+/**  Looping through an empty array */
+export const Third: Story = {
+  name: 'EmptyArray',
+  render: () => (
+    <div>
+      <For each={[]} fallback={<div>The array is empty</div>}>
+        {(name, index) => <ChildName key={index} name={name} index={index} />}
       </For>
     </div>
   ),
