@@ -1,11 +1,11 @@
 import { JSX, ReactElement } from 'react';
 
-export interface MatchProps {
-  when: boolean | undefined | null;
+export interface MatchProps<T> {
+  when: T | boolean | undefined | null;
   children: JSX.Element | (() => JSX.Element);
 }
 
-export interface SwitchProps {
+export interface SwitchProps<T> {
   fallback?: JSX.Element;
-  children: ReactElement<MatchProps> | ReactElement<MatchProps>[];
+  children: ReactElement<MatchProps<T>> | ReactElement<MatchProps<T>>[];
 }

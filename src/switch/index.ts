@@ -1,7 +1,7 @@
-import { FC, JSX } from 'react';
+import { JSX } from 'react';
 import { MatchProps, SwitchProps } from './type';
 
-export const Switch: FC<SwitchProps> = (props): JSX.Element | null => {
+export const Switch = <T>(props: SwitchProps<T>): JSX.Element | null => {
   let children = props.children;
 
   // turning the child to be array all the times
@@ -26,7 +26,7 @@ export const Switch: FC<SwitchProps> = (props): JSX.Element | null => {
   return props.fallback as JSX.Element;
 };
 
-export const Match: FC<MatchProps> = (props): JSX.Element | null => {
+export const Match = <T>(props: MatchProps<T>): JSX.Element | null => {
   if (props.when) {
     if (typeof props.children === 'function') {
       return props.children();
