@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import { ShowProps } from './type';
 
-export const Show = <T>(props: ShowProps<T>): JSX.Element | null => {
+export const Show = (props: ShowProps): JSX.Element | null => {
   if (props.when) {
     if (typeof props.children === 'function') {
       return props.children();
