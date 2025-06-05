@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FC } from 'react';
 import { MatchProps, SwitchProps } from './type';
 import { Show } from '../show';
@@ -18,7 +18,7 @@ export const Switch: FC<SwitchProps> = props => {
     }
   }
 
-  return <>{props.fallback ?? null}</>;
+  return <Fragment>{props.fallback ?? null}</Fragment>;
 };
 
 export const Match: FC<MatchProps> = props => {
