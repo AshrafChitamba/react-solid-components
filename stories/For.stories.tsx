@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { For } from '../src';
-import * as React from 'react';
 import { ChildName, ChildDetails } from '../example/Child';
 
 /** This is component is used to simplify the control flow of

@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Show } from '../src';
-import * as React from 'react';
 
 /** This is component is used control conditional
  * rendering making it more readable and modular */
