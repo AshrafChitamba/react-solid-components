@@ -1,7 +1,7 @@
-import { JSX, ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export interface ForProps<T, K extends ReactNode> {
+export interface ForProps<T> {
   each: readonly T[];
-  children: (item: T, index: number) => K;
-  fallback?: JSX.Element;
+  children: (item: T, index: number) => ReactNode;
+  fallback?: ReactNode;
 }

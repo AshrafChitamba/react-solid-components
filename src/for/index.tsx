@@ -1,13 +1,14 @@
 import React from 'react';
-import { Fragment, ReactNode } from 'react';
+import { Fragment } from 'react';
 import { ForProps } from './type';
+import { Show } from '../show';
 
-export const For = <T, K extends ReactNode>(props: ForProps<T, K>) => {
+export const For = <T,>(props: ForProps<T>) => {
   return (
     <Fragment>
-      {props.each.length
-        ? props.each.map(props.children)
-        : props.fallback ?? null}
+      <Show when={props.each.length > 0} fallback={props.fallback}>
+        {props.each.map((item, index) => props.children(item, index))}
+      </Show>
     </Fragment>
   );
 };

@@ -1,7 +1,7 @@
-import { JSX } from 'react';
+import { ReactNode } from 'react';
 
 export interface ShowProps {
   when: boolean | undefined | null;
-  fallback?: JSX.Element;
-  children: JSX.Element | (() => JSX.Element);
+  fallback?: ReactNode;
+  children: ReactNode | (() => ReactNode);
 }

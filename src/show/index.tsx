@@ -1,12 +1,17 @@
-import { FC } from 'react';
+import React from 'react';
+import { Fragment } from 'react';
 import { ShowProps } from './type';
 
-export const Show: FC<ShowProps> = props => {
-  if (!props.when) {
-    if (typeof props.children === 'function') {
-      return props.children();
-    } else {
-      return props.children;
-    }
-  } else return props.fallback ?? null;
+export const Show = (props: ShowProps) => {
+  const shouldShow = !!props.when;
+
+  return (
+    <Fragment>
+      {shouldShow
+        ? typeof props.children === 'function'
+          ? props.children()
+          : props.children
+        : props.fallback ?? null}
+    </Fragment>
+  );
 };

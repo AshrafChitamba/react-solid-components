@@ -1,11 +1,11 @@
-import { JSX, ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export interface MatchProps {
   when: boolean | undefined | null;
-  children: JSX.Element | (() => JSX.Element);
+  children: ReactNode | (() => ReactNode);
 }
 
 export interface SwitchProps {
-  fallback?: JSX.Element;
+  fallback?: ReactNode;
   children: ReactElement<MatchProps> | ReactElement<MatchProps>[];
 }
